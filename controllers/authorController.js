@@ -3,7 +3,11 @@ const asyncHandler = require("express-async-handler");
 
 // Display list of all Authors.
 exports.author_list = asyncHandler(async (req, res, next) => {
-  res.send("NOT IMPLEMENTED: Author list");
+  const allAuthors = await Author.find({});
+  res.render('author_list', {
+    title: "Authors List Page",
+    author_list: allAuthors
+  })
 });
 
 // Display detail page for a specific Author.
