@@ -1,3 +1,6 @@
+# Express Local Library.
+- following [MDN's Express course](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs).
+
 ### The App architecture
 <img src="./app-arch/mvc_express.png">
 
