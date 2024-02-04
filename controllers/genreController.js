@@ -153,7 +153,7 @@ exports.genre_update_post = [
       res.render("genre_form", {
         title: "Create Genre",
         genre: genre,
-        errors: errors.array().push({msg: "This Genre Name already exists"}),
+        errors: errors.array().push({ msg: "This Genre Name already exists" }),
       });
       return;
     } else {
