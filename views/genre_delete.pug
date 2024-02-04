@@ -1,0 +1,17 @@
+extends layout 
+
+block content 
+    h1 #{title}: #{genre.name}
+
+    if books.length 
+        h2 There are #{books.length} associated to this genre.
+        h3 You should Delete them first!
+        ul
+        each bk in books 
+            li 
+                a(href=bk.url) #{bk.title}
+    else 
+        h2 Do you realy want to Delete this Genre?!
+        form(method="POST")
+            div#form-group
+                button.btn.btn-primary(type='submit') Delete

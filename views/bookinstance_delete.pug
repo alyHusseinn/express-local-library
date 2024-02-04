@@ -1,0 +1,9 @@
+extends layout 
+
+block content 
+    h1 #{title} ID:#{instance.id} of the Book #{instance.book.title}
+
+    p Click if you want to delete this Instance!.
+    form(method="POST")
+        div#form-group
+            button.btn.btn-primary(type='submit') Delete
